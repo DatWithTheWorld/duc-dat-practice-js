@@ -1,10 +1,5 @@
 class MovieController {
     constructor(movieServices, movieViews){
-<<<<<<< Updated upstream
-
-    }
-}
-=======
        this.movieServices = movieServices;
        this.movieViews = movieViews;
 
@@ -13,4 +8,3 @@ class MovieController {
     }
 }
 export default MovieController;
->>>>>>> Stashed changes

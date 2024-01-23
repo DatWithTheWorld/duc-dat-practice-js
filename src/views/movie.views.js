@@ -1,10 +1,6 @@
 import { createToast, removeToast } from "./components/handleToast";
 import debounce from '../helper/debounce';
 import PreLogin from './pages/PreLogin';
-<<<<<<< Updated upstream
-=======
-import MovieLogin from './modules/MovieLogin';
->>>>>>> Stashed changes
 class MovieView {
     constructor(){
         this.app = document.querySelector('#root');
@@ -19,11 +15,6 @@ class MovieView {
         this.app.appendChild(this.main);
 
         this.container.innerHTML += PreLogin();
-<<<<<<< Updated upstream
-
-    }
-}
-=======
         this.app.innerHTML += MovieLogin({});
         this.formGetinfor = this.app.querySelector('.form-getinfor');
     }
@@ -87,5 +78,4 @@ class MovieView {
    }
 }
 
->>>>>>> Stashed changes
 export default MovieView;

@@ -1,0 +1,67 @@
+
+@use "../abstracts/" as *;
+
+.form-getinfor{
+    &-child{
+        @include flex($direction:column,$gap:30px,$justify:center,$align:center);
+        .icon-close{
+            position: absolute;
+            padding: 5px;
+            top: 10px;
+            right: 10px;
+            border-radius: 20px;
+            &:hover{
+                background-color: $button-active-color;
+            }
+        }
+    }
+    visibility: visible;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $button-watch-color;
+    box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    z-index: 2;
+    font-size: 12px;
+    animation: joinss 2s ease-in-out 1s forwards backwards ;
+    padding: 50px 30px;
+    input{
+        width: 100%;
+        padding: 10px;
+        border: none;
+        outline: none;
+        @include font($font-family:$primary-font,$font-size:pxToRem(12));
+        @include border($border-radius:20px);
+    }
+    .submit-btn{
+        @include color($background:$button-submit-color,$color:$text-color);
+        @include button($border:none,$padding:10px,$width:40%);
+        @include border($border-radius:20px);
+        @include font($font-family:$primary-font,$font-size:pxToRem(12));
+        &:hover{
+            transform: scale(1.1);
+        }
+        transition: 0.6s ease-in-out;
+    }
+}
+@keyframes joinss {
+    0%{
+        top: 0%;
+        opacity: 0.4;
+    }
+    50%{
+        top: 30%;
+        opacity: 0.7;
+    }
+    100%{
+        top: 50%;
+        opacity: 1;
+       
+    }
+}
+.form-getinfor-child > input.invalid {
+    border-color: $btn-error;
+    background-color: $bg-inactive;
+  }

@@ -1,0 +1,383 @@
+@font-face {
+  font-family: Poppins;
+  src: url("Poppins-Medium.b6c09bf7.ttf");
+}
+
+body {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.main {
+  background-image: url("lg-bgr.de52a129.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.main:after {
+  content: "";
+  z-index: -1;
+  opacity: .8;
+  background: #230026;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container {
+  max-width: 100%;
+  height: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.blur {
+  filter: blur(20px);
+  pointer-events: none;
+}
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, img, sub, sup, dl, dt, dd, ol, ul, li, form, label, table, caption, article, figure, figcaption, footer, header, section {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+*, :before, :after {
+  box-sizing: border-box;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, :after, :before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.btn-primary {
+  cursor: pointer;
+  color: #fff;
+  background-color: #6100c2;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+  font-family: Poppins;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  transition: all .2s ease-in;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+}
+
+.form-getinfor {
+  visibility: visible;
+  z-index: 2;
+  animation: joinss 2s ease-in-out 1s forwards backwards;
+  background-color: #6100c2;
+  border-radius: 10px;
+  padding: 50px 30px;
+  font-size: 12px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 3px 3px 10px 1px #0003;
+}
+
+.form-getinfor-child {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  display: flex;
+}
+
+.form-getinfor-child .icon-close {
+  border-radius: 20px;
+  padding: 5px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.form-getinfor-child .icon-close:hover {
+  background-color: #f61212;
+}
+
+.form-getinfor input {
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  width: 100%;
+  padding: 10px;
+  font-family: Poppins;
+  font-size: .75rem;
+  font-style: normal;
+}
+
+.form-getinfor .submit-btn {
+  color: #fff;
+  cursor: pointer;
+  background-color: #27f531cc;
+  border: none;
+  border-radius: 20px;
+  width: 40%;
+  padding: 10px;
+  font-family: Poppins;
+  font-size: .75rem;
+  font-style: normal;
+  transition: all .6s ease-in-out;
+}
+
+.form-getinfor .submit-btn:hover {
+  transform: scale(1.1);
+}
+
+@keyframes joinss {
+  0% {
+    opacity: .4;
+    top: 0%;
+  }
+
+  50% {
+    opacity: .7;
+    top: 30%;
+  }
+
+  100% {
+    opacity: 1;
+    top: 50%;
+  }
+}
+
+.form-getinfor-child > input.invalid {
+  background-color: #fbe7e8;
+  border-color: #e24d4c;
+}
+
+.notifications {
+  z-index: 3;
+  position: fixed;
+  top: 30px;
+  right: 20px;
+}
+
+.notifications :where(.toast, .column) {
+  align-items: center;
+  display: flex;
+}
+
+.notifications .toast {
+  background: #fff;
+  border-radius: 4px;
+  justify-content: space-between;
+  width: 300px;
+  margin-bottom: 10px;
+  padding: 16px 17px;
+  animation: .3s forwards show_toast;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes show_toast {
+  0% {
+    transform: translateX(100%);
+  }
+
+  40% {
+    transform: translateX(-5%);
+  }
+
+  80% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-10px);
+  }
+}
+
+.notifications .toast.hide {
+  animation: .3s forwards hide_toast;
+}
+
+@keyframes hide_toast {
+  0% {
+    transform: translateX(-10px);
+  }
+
+  40% {
+    transform: translateX(0%);
+  }
+
+  80% {
+    transform: translateX(-5%);
+  }
+
+  100% {
+    transform: translateX(calc(100% + 20px));
+  }
+}
+
+.toast:before {
+  content: "";
+  width: 100%;
+  height: 3px;
+  animation: 5s linear forwards progress;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+@keyframes progress {
+  100% {
+    width: 0%;
+  }
+}
+
+.toast.success:before, .btn#success {
+  background: #0abf30;
+}
+
+.toast.error:before, .btn#error {
+  background: #e24d4c;
+}
+
+.toast.warning:before, .btn#warning {
+  background: #e9bd0c;
+}
+
+.toast.info:before, .btn#info {
+  background: #3498db;
+}
+
+.toast .column i {
+  font-size: 1.75rem;
+}
+
+.toast.success .column i {
+  color: #0abf30;
+}
+
+.toast.error .column i {
+  color: #e24d4c;
+}
+
+.toast.warning .column i {
+  color: #e9bd0c;
+}
+
+.toast.info .column i {
+  color: #3498db;
+}
+
+.toast .column span {
+  margin-left: 12px;
+  font-size: .85rem;
+}
+
+.toast i:last-child {
+  color: #aeb0d7;
+  cursor: pointer;
+}
+
+.toast i:last-child:hover {
+  color: #34495e;
+}
+
+.pk-form-prelogin {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  display: flex;
+}
+
+.pk-form-prelogin .form-prelogin {
+  flex-direction: column;
+  gap: 40px;
+  display: flex;
+}
+
+.pk-form-prelogin .form-prelogin-title {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+}
+
+.pk-form-prelogin .form-prelogin-title figure {
+  width: 60%;
+}
+
+.pk-form-prelogin .form-prelogin-title figure img {
+  width: 100%;
+}
+
+.pk-form-prelogin .form-prelogin-title p {
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.pk-form-prelogin .form-prelogin-behavior {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+}
+
+.pk-form-prelogin .form-prelogin-behavior p {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.pk-form-prelogin .form-prelogin-behavior p a {
+  text-decoration-line: underline;
+}
+
+/*# sourceMappingURL=index.f0f8d8ef.css.map */

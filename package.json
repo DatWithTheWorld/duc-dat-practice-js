@@ -4,7 +4,7 @@
   "description": "",
   "source": "src/resources/index.html",
   "scripts": {
-    "jsv": "json-server --watch db.json",
+    "watchDB": "json-server --watch db.json --port 3021",
     "start": "parcel",
     "build": "parcel build",
     "prepare": "husky install"
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/DatWithTheWorld/duc-dat-practice-js#readme",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.11.0",
     "buffer": "^6.0.3",
     "eslint": "^8.45.0",
     "eslint-config-airbnb-base": "^15.0.0",

@@ -11,7 +11,7 @@ return `
     </div>
     <div class = "form-prelogin-behavior">
     <button class = "btn-primary btn-log">Log in</button>
-    <p>No account ? <a href="#" >Sign up</a></p>
+    <p>No account ? <a href="#" class = "btn-signup" >Sign up</a></p>
     </div>
  </div>
 `;

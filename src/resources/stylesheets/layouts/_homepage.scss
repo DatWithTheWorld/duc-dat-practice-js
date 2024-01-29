@@ -1,0 +1,76 @@
+@use "../abstracts/" as *;
+
+.main-section{
+    
+    @include flex();
+    &-content--right{
+        width: 75%;
+       .header-container{
+        padding:  40px ;
+        @include flex($direction:column,$justify:center);
+        .nav-container{
+            @include flex($justify:space-between);
+            ul{
+                @include flex();
+                .avatar-icon{
+                    width: 30px;
+                    img{   
+                        border-radius: 50%; 
+                        width: 100%;
+                    }
+                }
+            }
+            ul:nth-child(1){
+                width: 30%;
+                @include flex($justify:space-between);
+            }
+            ul:nth-child(2){
+                width: 20%;
+                @include flex($justify:space-between);
+                li:nth-child(3){
+                    @include flex($justify:center,$align:center);
+                    gap: 10px;
+                }
+            }
+        }
+        .header-title{
+            margin-top: 10%;
+            @include flex($direction:column);
+            gap: 20px;
+            .movie-name{
+                @include font($font-size:pxToRem(48),$font-weight:600);
+            }
+            .movie-details{
+                @include flex();
+                @include font($font-size:pxToRem(14));
+                span{
+                    padding: 0 5px;
+                }
+                span:nth-child(1),span:nth-child(2){
+                    border-right: 2px solid $text-color;
+                }
+            }
+            .button-group{
+                width: 20%;
+                @include flex();
+                gap: 15px;
+                .btn-watchNow{
+                    width: 60%;
+                }
+                .heart{
+                   border-radius: 10px;
+                   border: none;
+                   @include flex($justify:center,$align:center);
+                   img{
+                    width: 80%;
+                   }
+                }
+            }
+        }
+       }
+    }
+    &-nav--left{
+        width: 25%;
+     
+    }
+}

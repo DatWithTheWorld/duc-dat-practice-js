@@ -12,3 +12,4 @@ export { default as IcUsersIcon} from './ic-users.svg';
 export { default as IcMessageIcon} from './ic-message.svg';
 export { default as IcSlidersIcon} from './ic-sliders.svg';
 export { default as IcLogOutIcon} from './ic-log-out.svg';
+

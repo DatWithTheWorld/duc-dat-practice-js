@@ -13,14 +13,12 @@ body {
   font-family: $primary-font;
 }
 .main{
-
   position: relative;
   background-image: url("../assets/icons/lg-bgr.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
- 
    &::after{
     content: "";
     position: absolute;

@@ -1,6 +1,7 @@
 import Header from '../layouts/header';
-import { IcHeartActiveIcon,IcBellIcon,IcHeartNoActiveIcon } from '../../resources/assets/icons';
+import { IcHeartActiveIcon,IcBellIcon,IcHeartNoActiveIcon,PngTkoTrain } from '../../resources/assets/icons';
 import leftNav from '../layouts/leftNav';
+import cardTrending from '../components/cardTrending';
 const HomePage = () => {
     return`
     <section class="main-section">
@@ -19,6 +20,18 @@ const HomePage = () => {
     <div class="button-group">
     <button class = "btn-primary btn-watchNow">Watch now</button>
     <button class = "heart"><img src = "${IcHeartNoActiveIcon}"></button>
+    </div>
+    </div>
+    <div class="movie-center">
+    <button class = "btn-primary btn-add">Add new</button>
+    <div class="movie-center-trending">
+    <h3>Trending</h3>
+    <div class="movie-center-trending-card">
+    ${cardTrending(PngTkoTrain,IcHeartActiveIcon,'Tokyo Train','2022','Action comedy')}
+    ${cardTrending(PngTkoTrain,IcHeartActiveIcon,'Tokyo Train','2022','Action comedy')}
+    ${cardTrending(PngTkoTrain,IcHeartActiveIcon,'Tokyo Train','2022','Action comedy')}
+    ${cardTrending(PngTkoTrain,IcHeartActiveIcon,'Tokyo Train','2022','Action comedy')}
+    </div>
     </div>
     </div>
     </div>

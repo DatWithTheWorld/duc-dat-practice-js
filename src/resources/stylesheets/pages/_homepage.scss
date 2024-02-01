@@ -1,24 +1,67 @@
 @use "../abstracts/" as *;
 
 .main-section{
-    
+    overflow: hidden;
+    height: 100%;
     @include flex();
     &-content--right{
+        overflow: scroll;
         width: 80%;
-        padding: 0 40px;
+        margin-left: 20%;
+        padding: 0 0px 0 40px;
+        &::-webkit-scrollbar{
+            width: 0;
+        }
+        .movie-center{
+            position: relative;
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+            padding-top: 30px;
+            padding-right: 30px;
+            overflow: scroll;
+            &-trending{
+                margin-top:3%;
+                &-card{
+                    padding: 10px 0;
+                    @include flex($justify:space-between);
+                }
+            }
+            &::-webkit-scrollbar{
+                width: 0;
+            }
+            .btn-add{
+                float: right;
+                width:10%;
+                margin-right: 20px;
+
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: $background-left-nav;
+                opacity: 0.9;
+            }
+        }
     }
     &-nav--left{
         padding: 30px 40px 40px 40px;
         width: 20%;
-        height: 100vh;
         background-color: $background-left-nav;
-       
+       position: fixed;
+       left: 0;
+       top: 0;
     }
 }
 .header-title{
-    margin-top: 5%;
     @include flex($direction:column);
     gap: 20px;
+    padding: 50px 0;
     .movie-name{
         @include font($font-size:pxToRem(48),$font-weight:600);
     }

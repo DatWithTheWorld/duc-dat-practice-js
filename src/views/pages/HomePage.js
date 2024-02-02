@@ -33,6 +33,15 @@ const HomePage = () => {
     ${cardTrending(PngTkoTrain,IcHeartActiveIcon,'Tokyo Train','2022','Action comedy')}
     </div>
     </div>
+    <div class="movie-center-continue">
+    <h3>Continue watching</h3>
+    <div class="movie-center-continue-card">
+    ${cardTrending(PngTkoTrain,IcHeartActiveIcon,'Tokyo Train','2022','Action comedy')}
+    ${cardTrending(PngTkoTrain,IcHeartActiveIcon,'Tokyo Train','2022','Action comedy')}
+    ${cardTrending(PngTkoTrain,IcHeartActiveIcon,'Tokyo Train','2022','Action comedy')}
+ 
+    </div>
+    </div>
     </div>
     </div>
     </section>

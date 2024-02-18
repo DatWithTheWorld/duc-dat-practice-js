@@ -2,7 +2,6 @@ import { IcHeartActiveIcon, IcStarIcon, PngTkoTrain } from "../../resources/asse
 import cardTrending from "../components/cardTrending";
 import Header from "../layouts/header";
 import leftNav from "../layouts/leftNav";
-
 const Trending = () => {
     return `
     <section class="main-section">

@@ -14,3 +14,6 @@ export { default as IcSlidersIcon} from './ic-sliders.svg';
 export { default as IcLogOutIcon} from './ic-log-out.svg';
 export { default as PngTkoTrain} from './png-tko-train.png';
 export { default as IcStarIcon} from './ic-star.svg';
+export { default as IcPauseIcon} from './ic-pause.svg';
+export { default as IcVolumeIcon} from './ic-volume.svg';
+export { default as IcMaximizeIcon} from  './ic-maximize.svg';

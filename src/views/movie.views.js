@@ -1,6 +1,7 @@
 import { createToast, removeToast } from "./components/handleToast";
 import debounce from '../helper/debounce';
 import PreLogin from './pages/PreLogin';
+import { clearForm, collectData } from "../helper/formUtils";
 class MovieView {
     constructor(){
         this.app = document.querySelector('#root');
@@ -15,7 +16,7 @@ class MovieView {
         this.app.appendChild(this.main);
 
         this.container.innerHTML += PreLogin();
-
-    }
+        }   
 }
+
 export default MovieView;

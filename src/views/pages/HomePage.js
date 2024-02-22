@@ -1,3 +1,4 @@
+
 import Header from '../layouts/header';
 import { IcHeartActiveIcon,IcBellIcon,IcHeartNoActiveIcon } from '../../resources/assets/icons';
 import leftNav from '../layouts/leftNav';

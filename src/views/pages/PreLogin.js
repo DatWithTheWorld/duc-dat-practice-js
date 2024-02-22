@@ -10,17 +10,17 @@ const PreLogin = () => {
     </div>
     <div class = "form-prelogin-behavior">
     <button class = "btn-primary btn-log">Log in</button>
-    <p>No account ? <a href="#" class = "btn-signup" >Sign up</a></p>
+    <p>No account ? <span class = "btn-signup" >Sign up</span></p>
     </div>
  </div>
- <div class  = "con-form-login">
+ <div class  = "con-form-login hidden">
     <form>
       <input class = "username-input" type = "text" placeholder = "Username">
       <input class = "userpassword-input" type = "password" placeholder = "Password">
       <button class = "btn-submit-login">Submit</button>
     </form>
  </div>
- <div class  = "con-form-regist">
+ <div class  = "con-form-regist hidden">
     <form>
       <input class = "username-input" type = "text" placeholder = "Username">
       <input class = "userpassword-input" type = "password" placeholder = "Password">

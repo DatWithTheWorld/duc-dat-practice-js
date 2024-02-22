@@ -23,7 +23,35 @@ class MovieView {
         // this.container.innerHTML += Playscr();
         // this.container.innerHTML += HomePage();
         // this.container.innerHTML += Favorite();
-        }   
+        }  
+        toggleLogin(){
+          const logginbtn = document.querySelector(".btn-log");
+          const loginform = document.querySelector(".con-form-login");
+          logginbtn.addEventListener("click", function(){
+             loginform.classList.toggle('hidden');
+          })
+          document.addEventListener("click", function(e){
+            const targetE = e.target;
+            if(!loginform.contains(targetE)&& !logginbtn.contains(targetE)){
+               loginform.classList.add('hidden');
+            }
+          })
+        } 
+        toggleRegist(){
+            const signupbtn = document.querySelector(".btn-signup");
+            const registform = document.querySelector(".con-form-regist");
+            signupbtn.addEventListener("click", function(){
+               registform.classList.toggle('hidden');
+            })
+            document.addEventListener("click", function(e){
+              const targetE = e.target;
+              if(!registform.contains(targetE)&& !signupbtn.contains(targetE)){
+                    registform.classList.add('hidden');
+              }
+            })
+          } 
 }
+
+
 
 export default MovieView;

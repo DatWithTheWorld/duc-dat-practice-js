@@ -40,8 +40,11 @@
           $font-weight: 700,
           $line-height: 20px
         );
-        a {
+        span{
           text-decoration-line: underline;
+          &:hover{
+            color: red;
+          }
         }
       }
     }
@@ -101,10 +104,4 @@
     }
 
   }
-}
-.con-form-login{
-display: block;
-}
-.con-form-regist{
-    display: none;
 }

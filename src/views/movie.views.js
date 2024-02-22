@@ -21,4 +21,5 @@ class MovieView {
         this.container.innerHTML +=Trending();
         }   
 }
+
 export default MovieView;

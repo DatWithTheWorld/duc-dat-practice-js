@@ -5,7 +5,7 @@
   "source": "src/resources/index.html",
   "scripts": {
     "watchDB": "json-server --watch db.json --port 3021",
-    "start": "parcel",
+    "start": "parcel --port 1235 src/resources/index.html --public-url /login",
     "build": "parcel build",
     "prepare": "husky install"
   },

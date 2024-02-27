@@ -19,8 +19,24 @@ class MovieView {
     this.app.appendChild(this.toastList);
     this.app.appendChild(this.main);
 
-
     this.router.changeRoute();
+  }
+  appearToolbar() {
+    
+    const playscr = document.querySelector('.playscr');
+    playscr.addEventListener('click', function (event) {
+      const videos = document.getElementById('playsrcvd');
+    const target = event.target;
+    const playbarcon = document.querySelector('playscr-bar-con');
+    const figureE = playscr.querySelector('figure');
+      if( target !== playbarcon && !Array.from(figureE).includes(target)){
+        if(videos.paused){
+          videos.play();
+        }else{
+          videos.pause();
+        }
+      }
+    });
   }
 
   initRoute() {
@@ -59,12 +75,7 @@ class MovieView {
     });
   }
 
-  toggleTool() {
-    const playscr = document.querySelector('.playscr');
-    document.addEventListener('click', function (e) {
-      // Logic for toggleTool
-    });
-  }
+  
 }
 
 export default MovieView;

@@ -10,6 +10,7 @@ class MovieController {
       this.movieViews.toggleRegist();
     }else if(currentPath === "/playscr"){
     this.movieViews.appearToolbar();
+    this.movieViews.toggleBar();
   }
 }
 }

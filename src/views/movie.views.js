@@ -22,21 +22,45 @@ class MovieView {
     this.router.changeRoute();
   }
   appearToolbar() {
-    
+    const returnbtn = document.querySelector('.returnbtn');
     const playscr = document.querySelector('.playscr');
+    const playcircle = document.querySelector('.playcircle');
+    const playbarcon = document.querySelector('.playscr-bar-con');
+    const figureE = playscr.querySelector('.figuresc');
     playscr.addEventListener('click', function (event) {
       const videos = document.getElementById('playsrcvd');
     const target = event.target;
-    const playbarcon = document.querySelector('playscr-bar-con');
-    const figureE = playscr.querySelector('figure');
       if( target !== playbarcon && !Array.from(figureE).includes(target)){
         if(videos.paused){
           videos.play();
+          playcircle.classList.toggle('hidden');
+          setTimeout(() => {
+            playbarcon.classList.toggle('hidden')
+            returnbtn.classList.toggle('hidden')
+          },10000);
         }else{
           videos.pause();
+          
+          playcircle.classList.toggle('hidden');
+          playbarcon.classList.toggle('hidden')
+          returnbtn.classList.toggle('hidden');
         }
       }
     });
+    videos.addEventListener('ended', () =>{
+      playcircle.classList.toggle('hidden');
+      playbarcon.classList.toggle('hidden')
+      returnbtn.classList.toggle('hidden');
+    })
+  }
+  toggleBar(){
+    const playscrbarcon = document.querySelector('.playscr-bar-con')
+    const returnbtn = document.querySelector('.returnbtn');
+    const videos = document.getElementById('playsrcvd');
+      setTimeout(() => {
+        playscrbarcon.classList.toggle('hidden')
+        returnbtn.classList.toggle('hidden')
+      },10000);
   }
 
   initRoute() {

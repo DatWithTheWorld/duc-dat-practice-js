@@ -1,0 +1,22 @@
+{
+    "users":[
+        {
+            "favorites":[
+            ]
+        }
+    ],
+    "movies":[
+        {
+         "mid":"1",
+         "name":"Ghost",
+         "year":"2015",
+         "type":"scary",
+         "link":"",
+         "duration":"4.0 hours",
+         "description":"The best movies of the year",
+         "evaluate":"5",
+         "watched":"false",
+         "timewatched":"0:00:00"
+        }  
+    ]
+}

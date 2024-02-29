@@ -1,3 +1,4 @@
+
 import MovieView from '../views/movie.views';
 
 class MovieController {

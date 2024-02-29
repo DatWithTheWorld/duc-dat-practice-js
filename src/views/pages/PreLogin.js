@@ -14,14 +14,14 @@ const PreLogin = () => {
     </div>
  </div>
  <div class  = "con-form-login hidden">
-    <form>
+    <form class="form-log">
       <input class = "username-input" type = "text" placeholder = "Username">
       <input class = "userpassword-input" type = "password" placeholder = "Password">
       <button class = "btn-submit-login">Submit</button>
     </form>
  </div>
  <div class  = "con-form-regist hidden">
-    <form>
+    <form class="form-res">
       <input class = "username-input" type = "text" placeholder = "Username">
       <input class = "userpassword-input" type = "password" placeholder = "Password">
       <input class = "useremail-input" type = "text" placeholder = "Email">

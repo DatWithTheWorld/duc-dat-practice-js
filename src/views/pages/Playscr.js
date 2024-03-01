@@ -6,6 +6,7 @@ const Playscr = (videolink,timing,maxtime) => {
         <source src="http://localhost:3000/food.mp4" type="video/mp4">
       </video>
       <div class="playscr">
+        <div class = "opa hidden"></div>
         <figure class="figuresc playcircle hidden">
         <img src="${IcPlayCircleIcon}">
         </figure>

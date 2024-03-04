@@ -4,6 +4,7 @@ import Router from '../router/Router';
 import Playscr from './pages/Playscr';
 import Favorite from './pages/Favorite';
 import HomePage from './pages/HomePage';
+import cardTrending from './components/cardTrending';
 class MovieView {
   constructor() {
     this.app = document.querySelector('#root');
@@ -154,7 +155,17 @@ class MovieView {
       thirdli.style.opacity = "1"
     }
   }
-  
+  displayData(movies){
+    this.movies = movies;
+  console.log(this.movies);
+  const hometrendingct = document.querySelector(".movie-center-trending-card");
+  let html = "";
+  this.movies.forEach(movie => {
+    html += cardTrending(movie);
+    console.log(cardTrending(movie))
+  });
+  hometrendingct.innerHTML = html;
+  }
 }
 
 export default MovieView;

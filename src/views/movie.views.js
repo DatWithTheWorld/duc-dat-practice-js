@@ -92,7 +92,48 @@ class MovieView {
       }
     });
   }
+   toggleAddForm(){
+    const btnadd = document.querySelector('.btn-add');
+    const addForm = document.querySelector('.addMovieForm');
+    btnadd.addEventListener('click', function (e) {
+      addForm.classList.toggle('hidden');     
+    });
+    document.addEventListener('click', function(event) {
+      const targetElement = event.target; 
+      if(!addForm.classList.contains('hidden')){
+        if (!addForm.contains(targetElement) && !btnadd.contains(targetElement)) {
+          addForm.classList.toggle('hidden');
+        }
+      }
+    });
+   }
+   videoDuration(){
+    const videos = document.getElementById('playsrcvd');
+    let maxDuration = 0;
+    const progressBar = document.querySelector('.progress-bar');
+    const timingElement = document.querySelector('.timing');
+    const maxtimeE = document.querySelector('.maxtime');
+    videos.addEventListener('loadedmetadata', function(e) {
+        maxDuration = videos.duration;
+    });
 
+    videos.addEventListener('timeupdate', function() {
+        const currentTime = videos.currentTime;
+        const progressPercentage = (currentTime / maxDuration) * 100;
+        const progressWidth = (progressPercentage / 100) * 100;
+        progressBar.style.width = progressWidth + '%';
+
+        const minutes = Math.floor(currentTime / 60);
+        const seconds = Math.floor(currentTime % 60);
+        const formattedTime = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        timingElement.textContent = formattedTime;
+
+        const minutesm = Math.floor(maxDuration/60);
+        const secondsm = Math.floor(maxDuration%60);
+        const formattedTimem = `${String(minutesm).padStart(2, '0')}:${String(secondsm).padStart(2, '0')}`;
+        maxtimeE.textContent = formattedTimem;
+    });
+   }
   toggleRegist() {
     const signupbtn = document.querySelector('.btn-signup');
     const registform = document.querySelector('.con-form-regist');
@@ -112,6 +153,14 @@ class MovieView {
     button.addEventListener("click",(e)=>{
       e.preventDefault();
       window.location.href = "http://localhost:1235/home";     
+    })
+  }
+  return(){
+    const returnbtn = document.querySelector('.returnbtn');
+    returnbtn.addEventListener('click',(e)=>{
+
+      e.preventDefault();
+      window.location.href = "http://localhost:1235/home";
     })
   }
   homepageoption(){

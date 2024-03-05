@@ -18,8 +18,8 @@ const Playscr = (videolink,timing,maxtime) => {
         <figure>
              <img src="${IcPauseIcon}">
         </figure>
-        <div class="progress"></div>
-        <span class="timevideo">11:23/39:04</span>
+        <div class="progress"><div class="progress-bar"></div></div>
+        <span class="timevideo"><span class = "timing"></span>/<span class ="maxtime"></span></span>
         <figure>
             <img src="${IcVolumeIcon}">
         </figure>

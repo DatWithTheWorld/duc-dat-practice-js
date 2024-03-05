@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <video  autoplay id="your-video-id">
+        <source src="../../api/public/food.mp4" type="video/mp4">
+    </video>
+    <p id="max-duration"></p> <!-- Thêm phần tử p để hiển thị maxDuration -->
+    <script>
+        const videoElement = document.getElementById('your-video-id');
+        let maxDuration = 0;
+        videoElement.addEventListener('loadedmetadata', function() {
+            maxDuration = videoElement.duration; 
+            if(videoElement.readyState >= 2) {
+                const bufferedTimeRanges = videoElement.buffered;
+                if (bufferedTimeRanges.length > 0) {
+                    const maxBufferedDuration = bufferedTimeRanges.end(bufferedTimeRanges.length - 1);
+                    if (maxBufferedDuration > maxDuration) {
+                        maxDuration = maxBufferedDuration;
+                    }
+                }
+            }
+            document.getElementById('max-duration').textContent = 'Độ dài lớn nhất của video: ' + maxDuration + ' giây';
+        });
+    </script>
+</body>
+</html>

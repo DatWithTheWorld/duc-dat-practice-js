@@ -12,9 +12,12 @@ class MovieController {
     }else if(currentPath === "/playscr"){
     this.movieViews.appearToolbar();
     this.movieViews.toggleBar();
+    this.movieViews.videoDuration();
+    this.movieViews.return();
   }else if(currentPath === "/home" || currentPath === "/favorite"|| currentPath === "/trending"){
      this.movieServices.getAllMovies().then((movies)=>{
       this.movieViews.displayData(movies)
+      this.movieViews.toggleAddForm();
      })
      this.movieViews.homepageoption();
      this.movieViews.showSite();

@@ -38,10 +38,8 @@
                             outline: none;
                             color: $button-watch-color;
                             font-weight: 500;
-                            text-transform: uppercase;
                             &::placeholder{
                                 color:$button-watch-color;
-                                text-transform: uppercase;
                             }
 
                         }
@@ -52,7 +50,6 @@
                             outline: none;
                             color: $button-watch-color;
                             font-weight: 500;
-                            text-transform: uppercase;
                             optgroup{
                                 list-style-type: circle;
                                 color: red;

@@ -34,6 +34,18 @@
             "description":"The best movies of the year",
             "evaluate":"5",
             "favorites":"ic-heart-3d"
+        },
+        {
+            "mid":"3",
+            "name":"Ghost",
+            "year":"2015",
+            "type":"scary",
+            "poster":"moonfall",
+            "link":"video.mp4",
+            "duration":"4.0 hours",
+            "description":"The best movies of the year",
+            "evaluate":"5",
+            "favorites":"ic-heart-3d"
         }  
     ]
 }

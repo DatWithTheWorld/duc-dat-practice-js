@@ -15,13 +15,18 @@ class MovieController {
     this.movieViews.videoDuration();
     this.movieViews.return();
   }else if(currentPath === "/home" || currentPath === "/favorite"|| currentPath === "/trending"){
-     this.movieServices.getAllMovies().then((movies)=>{
-       this.movieViews.displayDataTDP(movies)
-      });
-      this.movieServices.getAllMovies().then((movies)=>{
+    if(currentPath === "/home"){
+       this.movieServices.getAllMovies().then((movies)=>{
         this.movieViews.displayData(movies)
         this.movieViews.toggleAddForm();
    });
+    }
+     if(currentPath === "/trending"){
+    this.movieServices.getAllMovies().then((movies)=>{
+       this.movieViews.displayDataTDP(movies)
+       this.movieViews.showCardTrending(movies);
+      });
+    }
 
      this.movieViews.homepageoption();
      this.movieViews.showSite();

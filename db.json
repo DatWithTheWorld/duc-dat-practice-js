@@ -1,0 +1,51 @@
+{
+    "users":[
+        {   "id":"dd1",
+            "name":"datbrao",
+            "password":"1",
+            "avatar":"",
+            "email":"",
+            "favorites":[
+            ],
+            "watched":[{"mid":"1","timewatched":"00:00:30"}]
+        }
+    ],
+    "movies":[
+        {
+         "mid":"1",
+         "name":"House of Wealth",
+         "year":"2022",
+         "type":"Drama",
+         "poster":"png-tko-train",
+         "link":"food.mp4",
+         "duration":"2h 38m",
+         "description":"The movie follows the lives of a wealthy family, the Johnsons, who appear to have it all: a grand mansion, luxurious cars, and expensive designer clothing. However, behind the facade of their lavish lifestyle, there are deep-seated tensions and secrets that threaten to tear the family apart.",
+         "evaluate":"7.8",
+         "favorites":"ic-heart-3d"
+        },
+        {
+            "mid":"2",
+            "name":"Ghost",
+            "year":"2015",
+            "type":"scary",
+            "poster":"moonfall",
+            "link":"video.mp4",
+            "duration":"4.0 hours",
+            "description":"The best movies of the year",
+            "evaluate":"5",
+            "favorites":"ic-heart-3d"
+        },
+        {
+            "mid":"3",
+            "name":"Ghost",
+            "year":"2015",
+            "type":"scary",
+            "poster":"moonfall",
+            "link":"video.mp4",
+            "duration":"4.0 hours",
+            "description":"The best movies of the year",
+            "evaluate":"5",
+            "favorites":"ic-heart-3d"
+        }  
+    ]
+}

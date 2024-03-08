@@ -6,6 +6,7 @@ import Favorite from './pages/Favorite';
 import HomePage from './pages/HomePage';
 import cardTrending from './components/cardTrending';
 import CardDetail from './components/cardDetail';
+import { createToast } from './components/handleToast';
 class MovieView {
   constructor() {
     this.app = document.querySelector('#root');
@@ -148,13 +149,39 @@ class MovieView {
       }
     });
   }
-  loginss(){
-    const form = document.querySelector(".form-log")
-    const button = document.querySelector(".btn-submit-login")
-    button.addEventListener("click",(e)=>{
-      e.preventDefault();
-      window.location.href = "http://localhost:1235/home";     
-    })
+  loginss(users){
+    this.users = users;
+    const form = document.querySelector(".form-log");
+const button = document.querySelector(".btn-submit-login");
+
+button.addEventListener("click", (e) => {
+  e.preventDefault();
+  const name = document.querySelector(".username-input").value;
+  const password = document.querySelector(".userpassword-input").value;
+
+  if (name === "") {
+    createToast("error", "Please enter your username");
+  }  if (password === "") {
+    createToast("error", "Please enter your password");
+  }
+   if (name === "" || password === "") {
+    createToast("error", "Please enter your username and password");
+  } else {
+    let isLoggedIn = false;
+    this.users.forEach((user) => {
+      if (user.name === name && user.password === password) {
+        sessionStorage.setItem("name", name);
+        isLoggedIn = true;
+      }
+    });
+
+    if (isLoggedIn) {
+      window.location.href = "http://localhost:1235/home";
+    } else {
+      createToast("error", "Invalid username or password");
+    }
+  }
+});
   }
   return(){
     const returnbtn = document.querySelector('.returnbtn');
@@ -170,6 +197,12 @@ class MovieView {
     const firstli = ulsecond.getElementsByTagName('li')[0];
     const secondli = ulsecond.getElementsByTagName('li')[1];
     const thirdli = ulsecond.getElementsByTagName('li')[2];
+    const ulfourth = navleft.getElementsByTagName('ul')[3];
+    const logout = ulfourth.getElementsByTagName('li')[1];
+    logout.addEventListener('click',(e)=>{
+      e.preventDefault();
+      window.location.href = "http://localhost:1235/login";
+    })
     firstli.addEventListener("click",(e)=>{
       e.preventDefault();
       window.location.href = "http://localhost:1235/home";

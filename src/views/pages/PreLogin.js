@@ -1,7 +1,7 @@
+
 import { LgLogoMainIcon } from '../../resources/assets/icons';
 const PreLogin = () => {
   return `
-
  <div class = "pk-form-prelogin">
   <div class = "form-prelogin">
     <div class = "form-prelogin-title">

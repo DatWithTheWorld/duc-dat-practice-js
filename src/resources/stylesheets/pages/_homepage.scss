@@ -95,6 +95,19 @@
     }
     .movie-details{
         z-index: 3;
+        height: 100vh;
+        background-color: $background-left-nav;
+       
+    }
+}
+.header-title{
+    margin-top: 5%;
+    @include flex($direction:column);
+    gap: 20px;
+    .movie-name{
+        @include font($font-size:pxToRem(48),$font-weight:600);
+    }
+    .movie-details{
         @include flex();
         @include font($font-size:pxToRem(14));
         span{

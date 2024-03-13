@@ -1,0 +1,51 @@
+@use "../abstracts/" as *;
+
+.main-section{
+    
+    @include flex();
+    &-content--right{
+        width: 80%;
+        padding: 0 40px;
+    }
+    &-nav--left{
+        padding: 30px 40px 40px 40px;
+        width: 20%;
+        height: 100vh;
+        background-color: $background-left-nav;
+       
+    }
+}
+.header-title{
+    margin-top: 5%;
+    @include flex($direction:column);
+    gap: 20px;
+    .movie-name{
+        @include font($font-size:pxToRem(48),$font-weight:600);
+    }
+    .movie-details{
+        @include flex();
+        @include font($font-size:pxToRem(14));
+        span{
+            padding: 0 5px;
+        }
+        span:nth-child(1),span:nth-child(2){
+            border-right: 2px solid $text-color;
+        }
+    }
+    .button-group{
+        width: 20%;
+        @include flex();
+        gap: 15px;
+        .btn-watchNow{
+            width: 60%;
+        }
+        .heart{
+           border-radius: 10px;
+           border: none;
+           @include flex($justify:center,$align:center);
+           img{
+            width: 80%;
+           }
+        }
+    }
+}

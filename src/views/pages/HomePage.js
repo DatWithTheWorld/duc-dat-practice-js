@@ -17,25 +17,25 @@ const HomePage = (movies = []) => {
     <div class = "addMovieForm hidden">
     <div class="addMovieForm-con">
        <form>
-         <div class = "inputAddField-Name">
+         <div >
            <label>Movie name</label>
-           <input type="text" placeholder="Movie name" name="name">
+           <input class = "inputAddField-Name" type="text" placeholder="Movie name" name="name">
          </div>
-         <div class = "inputAddField-Date">
+         <div>
            <label>Year of release</label>
-           <input type="date" name="date">
+           <input  class = "inputAddField-Date" type="date" name="date">
          </div>
-         <div class = "inputAddField-Poster">
+         <div >
            <label>Poster</label>
-           <input type="file" name="poster" accept=".jpg,.png,image/jpeg,image/png" placeholder="Select file">
+           <input class = "inputAddField-Poster" type="file" name="poster" accept=".jpg,.png,image/jpeg,image/png" placeholder="Select file">
          </div>
-         <div class = "inputAddField-Video">
+         <div >
            <label>Video</label>
-           <input type="file" accept=".mp4">
+           <input class = "inputAddField-Video" type="file" accept=".mp4">
          </div>
-         <div class = "inputAddField-Type">
+         <div >
            <label>Type</label>
-           <select name="movieTypeSl">
+           <select class = "inputAddField-Type" name="movieTypeSl">
              <optgroup label="For Children">
                <option value="Cartoon">Cartoon</option>
                <option value="Comedy">Comedy</option>
@@ -63,9 +63,9 @@ const HomePage = (movies = []) => {
              </optgroup>
            </select>
          </div>
-         <div class = "inputAddField-Evaluate">
+         <div >
            <label>Evaluate</label>
-           <select name="movieEvaluateSl">
+           <select class = "inputAddField-Evaluate" name="movieEvaluateSl">
              <optgroup label="1 Star">
               <option value="1.0">1.0</option>
               <option value="1.1">1.1</option>
@@ -119,11 +119,11 @@ const HomePage = (movies = []) => {
              </optgroup>
              </select>
          </div>
-         <div class = "inputAddField-Description">
+         <div>
            <label>Description</label>
-           <input type="text" placeholder="Description">
+           <input  class = "inputAddField-Description" type="text" placeholder="Description">
          </div>
-         <button type="submit" class="btn btn-primary" id="AddNewMovie">Add</button>
+         <button class="btn btn-primary addmoviebtn" id="AddNewMovie">Add</button>
        </form>
     </div>
  </div>

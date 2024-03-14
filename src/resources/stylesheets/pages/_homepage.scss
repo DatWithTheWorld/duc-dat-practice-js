@@ -109,8 +109,14 @@
             &-continue{
                 &-card{
                     margin-top: 1%;
-                    @include flex($justify:space-between);
+                    @include flex();
+                    overflow: scroll;
                     gap: 30px;
+                    padding: 5px;
+                    margin-top: 10px;
+                    &::-webkit-scrollbar{
+                        width: 0;
+                    }
                     .card-trending{
                         min-width: 350px;
                     }
@@ -140,6 +146,7 @@
         }
     }
     &-nav--left{
+        height: 100%;
         padding: 30px 40px 40px 40px;
         width: 20%;
         background-color: $background-left-nav;

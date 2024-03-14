@@ -9,8 +9,6 @@ const HomePage = () => {
     ${leftNav()}
     </div>
     <div class="main-section-content--right">
-<<<<<<< Updated upstream
-=======
     <div class = "addMovieForm hidden">
     <div class="addMovieForm-con">
        <form>
@@ -125,7 +123,6 @@ const HomePage = () => {
     </div>
  </div>
     <div class="header-title">
->>>>>>> Stashed changes
     ${Header()}
     <div class="header-title">
     <p class="movie-name">Insider</p>

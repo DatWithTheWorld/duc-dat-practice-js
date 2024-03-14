@@ -1,11 +1,4 @@
-<<<<<<< Updated upstream
-class MovieController {
-    constructor(movieServices, movieViews){
-       this.movieServices = movieServices;
-       this.movieViews = movieViews;
-    }
-}
-=======
+
 import { createToast } from '../views/components/handleToast';
 import MovieView from '../views/movie.views';
 
@@ -127,6 +120,5 @@ class MovieController {
   };
 }
 
->>>>>>> Stashed changes
 export default MovieController;
 

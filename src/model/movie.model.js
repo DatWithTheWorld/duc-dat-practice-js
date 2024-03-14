@@ -1,6 +1,11 @@
 class Movie {
+<<<<<<< Updated upstream
     constructor({mid, name, year, type, link, duration, description, evaluate}){
            this.mid = mid;
+=======
+    constructor({id, name, year, type,poster, link, duration, description, evaluate, favorites}){
+           this.id = id;
+>>>>>>> Stashed changes
            this.name = name;
            this.year = year;
            this.type = type;

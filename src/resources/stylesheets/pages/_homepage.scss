@@ -5,9 +5,6 @@
     @include flex();
     &-content--right{
         width: 80%;
-<<<<<<< Updated upstream
-        padding: 0 40px;
-=======
         margin-left: 20%;
         height: 1000px;
         padding: 0 0px 0 40px;
@@ -144,7 +141,6 @@
                 filter: blur(200px);
             }
         }
->>>>>>> Stashed changes
     }
     &-nav--left{
         height: 100%;

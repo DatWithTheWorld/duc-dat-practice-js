@@ -13,8 +13,6 @@ return `
     <p>No account ? <a href="#" class = "btn-signup" >Sign up</a></p>
     </div>
  </div>
-<<<<<<< Updated upstream
-=======
  <div class  = "con-form-login hidden">
     <form class="form-log">
       <input class = "username-input" type = "text" placeholder = "Username" name="username">
@@ -30,7 +28,6 @@ return `
       <button type="submit" class = "btn-submit-regist">Submit</button>
     </form>
  </div>
->>>>>>> Stashed changes
 `;
 };
 

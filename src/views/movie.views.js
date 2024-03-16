@@ -508,6 +508,7 @@ bindAddToFavorite(handle){
  })
 }
 
+
 }
 
 export default MovieView;

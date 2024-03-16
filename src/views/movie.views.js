@@ -518,6 +518,10 @@ bindAddToFavorite(handle){
  })
 }
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+
 >>>>>>> Stashed changes
 }
 

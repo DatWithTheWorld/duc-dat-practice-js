@@ -3,6 +3,7 @@ import debounce from '../helper/debounce';
 import PreLogin from './pages/PreLogin';
 import { clearForm, collectData } from "../helper/formUtils";
 import HomePage from "./pages/HomePage";
+import Favorite from "./pages/Favorite";
 class MovieView {
     constructor(){
         this.app = document.querySelector('#root');
@@ -15,9 +16,8 @@ class MovieView {
         this.main.appendChild(this.container);
         this.app.appendChild(this.toastList);
         this.app.appendChild(this.main);
-
         // this.container.innerHTML += PreLogin();
-        this.container.innerHTML += HomePage();
+        this.container.innerHTML += Favorite();
         }   
 }
 

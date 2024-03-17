@@ -15,9 +15,9 @@ const PreLogin = () => {
  </div>
  <div class  = "con-form-login hidden">
     <form class="form-log">
-      <input class = "username-input" type = "text" placeholder = "Username">
-      <input class = "userpassword-input" type = "password" placeholder = "Password">
-      <button class = "btn-submit-login">Submit</button>
+      <input class = "username-input" type = "text" placeholder = "Username" name="username">
+      <input class = "userpassword-input" type = "password" placeholder = "Password" name="password">
+      <button type="submit" class = "btn-submit-login">Submit</button>
     </form>
  </div>
  <div class  = "con-form-regist hidden">
@@ -25,7 +25,7 @@ const PreLogin = () => {
       <input class = "username-input" type = "text" placeholder = "Username">
       <input class = "userpassword-input" type = "password" placeholder = "Password">
       <input class = "useremail-input" type = "text" placeholder = "Email">
-      <button class = "btn-submit-regist">Submit</button>
+      <button type="submit" class = "btn-submit-regist">Submit</button>
     </form>
  </div>
 `;

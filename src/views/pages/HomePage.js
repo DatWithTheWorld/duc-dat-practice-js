@@ -1,7 +1,8 @@
 
 import Header from '../layouts/header';
-import { IcHeartActiveIcon,IcBellIcon,IcHeartNoActiveIcon } from '../../resources/assets/icons';
+import { IcHeartActiveIcon,IcBellIcon,IcHeartNoActiveIcon,PngTkoTrain } from '../../resources/assets/icons';
 import leftNav from '../layouts/leftNav';
+import cardTrending from '../components/cardTrending';
 const HomePage = () => {
     return`
     <section class="main-section">
@@ -9,8 +10,12 @@ const HomePage = () => {
     ${leftNav()}
     </div>
     <div class="main-section-content--right">
-    ${Header()}
+   
     <div class="header-title">
+    ${Header()}
+    <video id="topvideotrending" width="100%" height="100%" autoplay controls>
+    <source src="http://localhost:3000/food.mp4" type="video/mp4">
+  </video>
     <p class="movie-name">Insider</p>
     <div class="movie-details">
     <span class="movie-details-year">2022</span>
@@ -20,6 +25,27 @@ const HomePage = () => {
     <div class="button-group">
     <button class = "btn-primary btn-watchNow">Watch now</button>
     <button class = "heart"><img src = "${IcHeartNoActiveIcon}"></button>
+    </div>
+    </div>
+    <div class="movie-center">
+    <button class = "btn-primary btn-add">Add new</button>
+    <div class="movie-center-trending">
+    <h3>Trending</h3>
+    <div class="movie-center-trending-card">
+    ${cardTrending(PngTkoTrain,IcHeartActiveIcon,'Tokyo Train','2022','Action comedy')}
+    ${cardTrending(PngTkoTrain,IcHeartActiveIcon,'Tokyo Train','2022','Action comedy')}
+    ${cardTrending(PngTkoTrain,IcHeartActiveIcon,'Tokyo Train','2022','Action comedy')}
+    ${cardTrending(PngTkoTrain,IcHeartActiveIcon,'Tokyo Train','2022','Action comedy')}
+    </div>
+    </div>
+    <div class="movie-center-continue">
+    <h3>Continue watching</h3>
+    <div class="movie-center-continue-card">
+    ${cardTrending(PngTkoTrain,IcHeartActiveIcon,'Tokyo Train','2022','Action comedy')}
+    ${cardTrending(PngTkoTrain,IcHeartActiveIcon,'Tokyo Train','2022','Action comedy')}
+    ${cardTrending(PngTkoTrain,IcHeartActiveIcon,'Tokyo Train','2022','Action comedy')}
+ 
+    </div>
     </div>
     </div>
     </div>

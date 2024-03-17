@@ -28,6 +28,9 @@
                     @include flex($justify:center,$align:center);
                     gap: 10px;
                 }
+                p{
+                    text-transform: capitalize;
+                }
             }
         }
     }

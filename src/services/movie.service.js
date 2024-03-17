@@ -1,8 +1,7 @@
 
-
 import Movie from '../model/movie.model';
 import api from '../api/movies';
-import User from '../model/user.mod
+import User from '../model/user.model';
 import { createToast } from '../views/components/handleToast';
 
 class MovieService {

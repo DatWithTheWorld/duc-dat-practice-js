@@ -97,7 +97,7 @@ class MovieController {
     this.movieViews.displayDataTDP(movies);
     const ids = await this.movieServices.getMovieIdByUIDCTN();
     console.log(ids);
-    this.movieViews.showCardTrending(movies);
+    this.movieViews.showCardTrending(movies,ids);
   }
   async handleDisplayDataFavorites() {
     const movies = await this.movieServices.getAllMovies();
@@ -122,4 +122,3 @@ class MovieController {
 
 export default MovieController;
 
-export default MovieController;

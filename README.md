@@ -34,5 +34,10 @@
 $npm i
 $npm start
 
-Open on web: http://localhost:1234
+$npm run watchDB 
+- To view db.json
+$node src/api/video.js 
+- To view and render video and image
+
+Open on web: http://localhost:1235
 ```

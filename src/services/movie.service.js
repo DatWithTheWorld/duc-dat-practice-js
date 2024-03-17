@@ -10,7 +10,6 @@ class MovieService {
     this.users = [];
     this.midbyuid = [];
     this.continue = [];
-    
   }
 
   async getAllMovies() {

@@ -12,7 +12,8 @@ class UserService{
              if(data){
                 data = await data.map((user) => new User(user));
                 this.users = data;
-                
+                console.log(this.users)
+                return this.users;
              }
         }catch(e){
                 createToast('error', error);
@@ -22,3 +23,6 @@ class UserService{
         this.getAllUsers();
     }
 }
+
+export default UserService;
+

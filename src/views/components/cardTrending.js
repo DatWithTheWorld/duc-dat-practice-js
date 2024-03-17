@@ -3,13 +3,13 @@ import { IcHeartActiveIcon } from "../../resources/assets/icons";
 
 function cardTrending(movie){
     return `
-    <div class="card-trending" data-id="${movie.mid}">
+    <div class="card-trending" data-id="${movie.id}">
     <figure class="card-trending-figure">
-    <img src="http://localhost:3000/${movie.poster}.png"> 
+    <img src="http://localhost:3000/${movie.poster}"> 
     </figure>
     <button class="btn-addFavorite">
     <figure class="card-trending-status">
-    <img src="http://localhost:3000/${movie.favorites}.svg"> 
+    <img class = "image-status" src="http://localhost:3000/${movie.favorites}.svg"> 
     </figure>
     </button>
     <div class="card-trending-content">

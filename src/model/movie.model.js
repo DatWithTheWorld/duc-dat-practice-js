@@ -1,6 +1,6 @@
 class Movie {
-    constructor({mid, name, year, type,poster, link, duration, description, evaluate,favorites}){
-           this.mid = mid;
+    constructor({id, name, year, type,poster, link, duration, description, evaluate, favorites}){
+           this.id = id;
            this.name = name;
            this.year = year;
            this.type = type;

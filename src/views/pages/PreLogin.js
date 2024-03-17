@@ -24,7 +24,7 @@ const PreLogin = () => {
     <form class="form-res">
       <input class = "username-input" type = "text" placeholder = "Username">
       <input class = "userpassword-input" type = "password" placeholder = "Password">
-      <input class = "useremail-input" type = "text" placeholder = "Email">
+      <input class = "useremail-input" type = "email" placeholder = "Email">
       <button type="submit" class = "btn-submit-regist">Submit</button>
     </form>
  </div>

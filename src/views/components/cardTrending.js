@@ -3,7 +3,7 @@ import { IcHeartActiveIcon } from "../../resources/assets/icons";
 
 function cardTrending(movie){
     return `
-    <div class="card-trending">
+    <div class="card-trending" data-id="${movie.mid}">
     <figure class="card-trending-figure">
     <img src="http://localhost:3000/${movie.poster}.png"> 
     </figure>

@@ -181,7 +181,7 @@ class MovieView {
     })
     thirdli.addEventListener("click",(e)=>{
       e.preventDefault();
-      window.location.href = "http://localhost:1235/playscr";
+      window.location.href = "http://localhost:1235/trending";
     })
   }
   showSite(){
@@ -215,6 +215,16 @@ class MovieView {
     console.log(cardTrending(movie))
   });
   hometrendingct.innerHTML = html;
+  }
+  displayDataTDP(movies){
+    this.movies = movies;
+    const movieTrending = document.querySelector(".movie-trending");
+    let html = "";
+    this.movies.forEach(movie => {
+      html += cardTrending(movie);
+      console.log(cardTrending(movie))
+    });
+    movieTrending.innerHTML = html;
   }
 }
 

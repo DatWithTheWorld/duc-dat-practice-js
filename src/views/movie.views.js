@@ -1,10 +1,5 @@
-import { createToast, removeToast } from "./components/handleToast";
-import debounce from '../helper/debounce';
+
 import PreLogin from './pages/PreLogin';
-<<<<<<< Updated upstream
-import { clearForm, collectData } from "../helper/formUtils";
-import HomePage from "./pages/HomePage";
-=======
 import Trending from './pages/Trending';
 import Router from '../router/Router';
 import Playscr from './pages/Playscr';
@@ -14,7 +9,6 @@ import cardTrending from './components/cardTrending';
 import CardDetail from './components/cardDetail';
 import { createToast } from './components/handleToast';
 import generateID from '../helper/uid'
->>>>>>> Stashed changes
 class MovieView {
     constructor(){
         this.app = document.querySelector('#root');
@@ -27,12 +21,6 @@ class MovieView {
         this.main.appendChild(this.container);
         this.app.appendChild(this.toastList);
         this.app.appendChild(this.main);
-
-<<<<<<< Updated upstream
-        // this.container.innerHTML += PreLogin();
-        this.container.innerHTML += HomePage();
-        }   
-=======
     this.router.changeRoute();
   }
    appearToolbar() {
@@ -207,6 +195,7 @@ button.addEventListener("click", (e) => {
       e.preventDefault();
       handle(sessionStorage.getItem("mvid"),""+video.currentTime)
       window.location.href = "/trending";
+
     })
   }
   homepageoption(){
@@ -517,12 +506,6 @@ bindAddToFavorite(handle){
   })
  })
 }
-
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
-
->>>>>>> Stashed changes
 }
 
 export default MovieView;

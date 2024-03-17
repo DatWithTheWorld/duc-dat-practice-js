@@ -1,9 +1,15 @@
 
 import Header from '../layouts/header';
-import { IcHeartActiveIcon,IcBellIcon,IcHeartNoActiveIcon } from '../../resources/assets/icons';
+import {
+  IcHeartActiveIcon,
+  IcBellIcon,
+  IcHeartNoActiveIcon,
+  PngTkoTrain,
+} from '../../resources/assets/icons';
 import leftNav from '../layouts/leftNav';
-const HomePage = () => {
-    return`
+import cardTrending from '../components/cardTrending';
+const HomePage = (movies = []) => {
+  return `
     <section class="main-section">
     <div class="main-section-nav--left">
     ${leftNav()}
@@ -125,6 +131,10 @@ const HomePage = () => {
     <div class="header-title">
     ${Header()}
     <div class="header-title">
+    ${Header()}
+    <video id="topvideotrending" width="100%" height="100%" autoplay controls>
+    <source src="http://localhost:3000/food.mp4" type="video/mp4">
+  </video>
     <p class="movie-name">Insider</p>
     <div class="movie-details">
     <span class="movie-details-year">2022</span>
@@ -136,10 +146,22 @@ const HomePage = () => {
     <button class = "heart"><img src = "${IcHeartNoActiveIcon}"></button>
     </div>
     </div>
+    <div class="movie-center">
+    <button class = "btn-primary btn-add">Add new</button>
+    <div class="movie-center-trending">
+    <h3>Trending</h3>
+    <div class="movie-center-trending-card">
+    </div>
+    </div>
+    <div class="movie-center-continue">
+    <h3>Continue watching</h3>
+    <div class="movie-center-continue-card">
+    </div>
+    </div>
+    </div>
     </div>
     </section>
     `;
-
 };
 
 export default HomePage;

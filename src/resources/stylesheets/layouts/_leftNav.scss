@@ -2,11 +2,15 @@
 
 .nav-left-container{
     @include flex($direction:column);
-    gap: 50px;
+    gap: 80px;
+    position: sticky;
+    top: 0;
     ul{
         @include flex($direction:column);
         gap: 15px;
         li{
+            opacity: 0.7;
+            font-weight: 100;
             &:hover{
                font-weight: 800;
             }

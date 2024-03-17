@@ -1,7 +1,7 @@
 
-import {LgLogoMainIcon} from '../../resources/assets/icons';
+import { LgLogoMainIcon } from '../../resources/assets/icons';
 const PreLogin = () => {
-return `
+  return `
  <div class = "pk-form-prelogin">
   <div class = "form-prelogin">
     <div class = "form-prelogin-title">
@@ -10,7 +10,7 @@ return `
     </div>
     <div class = "form-prelogin-behavior">
     <button class = "btn-primary btn-log">Log in</button>
-    <p>No account ? <a href="#" class = "btn-signup" >Sign up</a></p>
+    <p>No account ? <span class = "btn-signup" >Sign up</span></p>
     </div>
  </div>
  <div class  = "con-form-login hidden">

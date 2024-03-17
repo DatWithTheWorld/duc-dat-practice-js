@@ -4,10 +4,12 @@ class Movie {
            this.name = name;
            this.year = year;
            this.type = type;
+           this.poster = poster;
            this.link = link;
            this.duration = duration;
            this.description = description;
            this.evaluate = evaluate;
+           this.favorites = favorites;
 
     }
 }

@@ -122,3 +122,4 @@ class MovieController {
 
 export default MovieController;
 
+export default MovieController;

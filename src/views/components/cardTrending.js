@@ -1,3 +1,4 @@
+
 import { IcHeartActiveIcon } from "../../resources/assets/icons";
 
 function cardTrending(movie){

@@ -15,20 +15,20 @@ const HomePage = (movies = []) => {
     ${leftNav()}
     </div>
     <div class="main-section-content--right">
-    <div class = "addMovieForm">
+    <div class = "addMovieForm hidden">
     <div class="addMovieForm-con">
        <form>
          <div class = "inputAddField-Name">
            <label>Movie name</label>
-           <input type="text" placeholder="Movie name">
+           <input type="text" placeholder="Movie name" name="name">
          </div>
          <div class = "inputAddField-Date">
            <label>Year of release</label>
-           <input type="date">
+           <input type="date" name="date">
          </div>
          <div class = "inputAddField-Poster">
            <label>Poster</label>
-           <input type="file" accept=".jpg,.png,image/jpeg,image/png" placeholder="Select file">
+           <input type="file" name="poster" accept=".jpg,.png,image/jpeg,image/png" placeholder="Select file">
          </div>
          <div class = "inputAddField-Video">
            <label>Video</label>
@@ -149,7 +149,6 @@ const HomePage = (movies = []) => {
     <div class="movie-center-trending">
     <h3>Trending</h3>
     <div class="movie-center-trending-card">
-
     </div>
     </div>
     <div class="movie-center-continue">

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const host = 'http://localhost:3021/';
+const host = 'https://json-servers-d58dyas7a-datwiththeworlds-projects.vercel.app/';
 
 export default axios.create({
   baseURL: host,

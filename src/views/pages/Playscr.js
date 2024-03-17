@@ -1,3 +1,4 @@
+
 import { IcMaximizeIcon, IcPauseIcon, IcPlayCircleIcon, IcReturnIcon, IcSlidersIcon, IcVolumeIcon } from "../../resources/assets/icons";
 
 const Playscr = (videolink,timing,maxtime) => {

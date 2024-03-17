@@ -26,9 +26,18 @@
             &-trending{
                 margin-top:3%;
                 &-card{
-                    padding: 10px 0 30px 0;
-                    @include flex($justify:space-between);
+                    @include flex();
+                    overflow: scroll;
                     gap: 30px;
+                    padding: 5px;
+                    margin-top: 10px;
+                    position: relative;
+                    &::-webkit-scrollbar{
+                        width: 0;
+                    }
+                    .card-trending{
+                        height: 350px;
+                    }
                 }
             }
             &-continue{
@@ -60,6 +69,7 @@
                 height: 100%;
                 background-color: $background-left-nav;
                 opacity: 0.9;
+                filter: blur(200px);
             }
         }
     }
@@ -95,21 +105,6 @@
     }
     .movie-details{
         z-index: 3;
-        height: 100vh;
-        background-color: $background-left-nav;
-       position: fixed;
-       left: 0;
-       top: 0;
-    }
-}
-.header-title{
-    @include flex($direction:column);
-    gap: 20px;
-    padding: 50px 0;
-    .movie-name{
-        @include font($font-size:pxToRem(48),$font-weight:600);
-    }
-    .movie-details{
         @include flex();
         @include font($font-size:pxToRem(14));
         span{

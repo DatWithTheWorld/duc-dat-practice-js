@@ -99,6 +99,55 @@ class MovieView {
       }
     });
   }
+  loginss(){
+    const form = document.querySelector(".form-log")
+    const button = document.querySelector(".btn-submit-login")
+    button.addEventListener("click",(e)=>{
+      e.preventDefault();
+      window.location.href = "http://localhost:1235/home";     
+    })
+  }
+  homepageoption(){
+    const navleft = document.querySelector(".nav-left-container")
+    const ulsecond = navleft.getElementsByTagName('ul')[1];
+    const firstli = ulsecond.getElementsByTagName('li')[0];
+    const secondli = ulsecond.getElementsByTagName('li')[1];
+    const thirdli = ulsecond.getElementsByTagName('li')[2];
+    firstli.addEventListener("click",(e)=>{
+      e.preventDefault();
+      window.location.href = "http://localhost:1235/home";
+    })
+    secondli.addEventListener("click",(e)=>{
+      e.preventDefault();
+      window.location.href = "http://localhost:1235/favorite";
+
+    })
+    thirdli.addEventListener("click",(e)=>{
+      e.preventDefault();
+      window.location.href = "http://localhost:1235/trending";
+    })
+  }
+  showSite(){
+    const navleft = document.querySelector(".nav-left-container")
+    const ulsecond = navleft.getElementsByTagName('ul')[1];
+    const firstli = ulsecond.getElementsByTagName('li')[0];
+    const secondli = ulsecond.getElementsByTagName('li')[1];
+    const thirdli = ulsecond.getElementsByTagName('li')[2];
+    const currentPath = window.location.pathname;
+    if(currentPath === "/home"){
+         firstli.style.fontWeight = "900";
+         firstli.style.fontSize = "18px";
+         firstli.style.opacity = "1"
+    }else if(currentPath === "/favorite"){
+      secondli.style.fontWeight = "900";
+      secondli.style.fontSize = "18px";
+      secondli.style.opacity = "1"
+    }else if(currentPath === "/trending"){
+      thirdli.style.fontWeight = "900";
+      thirdli.style.fontSize = "18px";
+      thirdli.style.opacity = "1"
+    }
+  }
 }
 
 

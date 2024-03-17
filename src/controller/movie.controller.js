@@ -1,4 +1,3 @@
-
 import { createToast } from '../views/components/handleToast';
 import MovieView from '../views/movie.views';
 
@@ -121,5 +120,3 @@ class MovieController {
 }
 
 export default MovieController;
-
-

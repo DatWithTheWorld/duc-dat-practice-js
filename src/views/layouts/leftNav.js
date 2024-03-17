@@ -14,7 +14,7 @@ const homeLogo = [
 ]; 
 const listNavFirst = [
     `<figure><img src="${IcFilmIcon}"></figure><span>Home</span>`,
-    `<figure><img src="${IcHeartIcon}"></figure><span>Favorite</span>`,
+    `<figure><img src="${IcHeartIcon}"></figure><span>Favorites</span>`,
     `<figure><img src="${IcTrendingIcon}"></figure><span>Trending</span>`,
     `<figure><img src="${IcCalendarIcon}"></figure><span>Coming soon</span>`,
 ];

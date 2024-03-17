@@ -5,6 +5,7 @@ import { clearForm, collectData } from "../helper/formUtils";
 import HomePage from "./pages/HomePage";
 import Favorite from "./pages/Favorite";
 import Trending from "./pages/Trending";
+import Playscr from "./pages/Playscr";
 class MovieView {
     constructor(){
         this.app = document.querySelector('#root');
@@ -17,7 +18,8 @@ class MovieView {
         this.main.appendChild(this.container);
         this.app.appendChild(this.toastList);
         this.app.appendChild(this.main);
-        this.container.innerHTML +=Trending();
+        // this.container.innerHTML += PreLogin();
+        this.container.innerHTML += Playscr();
         }   
 }
 

@@ -182,7 +182,7 @@ button.addEventListener("click", (e) => {
     });
 
     if (isLoggedIn) {
-      window.location.href = "http://localhost:1235/home";
+      window.location.href = "/home";
     } else {
       createToast("error", "Invalid username or password");
     }

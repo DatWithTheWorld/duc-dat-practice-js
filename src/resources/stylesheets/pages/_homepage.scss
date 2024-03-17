@@ -28,12 +28,14 @@
                 &-card{
                     padding: 10px 0 30px 0;
                     @include flex($justify:space-between);
+                    gap: 30px;
                 }
             }
             &-continue{
                 &-card{
                     margin-top: 1%;
                     @include flex($justify:space-between);
+                    gap: 30px;
                     .card-trending{
                         min-width: 350px;
                     }
@@ -46,7 +48,7 @@
                 float: right;
                 width:10%;
                 margin-right: 20px;
-
+                text-wrap: nowrap;
             }
             &::after{
                 content: "";
@@ -71,6 +73,36 @@
     }
 }
 .header-title{
+    position: relative;
+    @include flex($direction:column);
+    gap: 20px;
+    padding: 50px 0;
+    z-index: 0;
+    .header-container{
+        z-index: 2;
+    }
+    video{
+        position: absolute;
+        top: 0;
+        width: 120%;
+        left: -20%;
+        object-fit: cover;
+        z-index: 1;
+    }
+    .movie-name{
+        z-index: 3;
+        @include font($font-size:pxToRem(48),$font-weight:600);
+    }
+    .movie-details{
+        z-index: 3;
+        height: 100vh;
+        background-color: $background-left-nav;
+       position: fixed;
+       left: 0;
+       top: 0;
+    }
+}
+.header-title{
     @include flex($direction:column);
     gap: 20px;
     padding: 50px 0;
@@ -88,6 +120,7 @@
         }
     }
     .button-group{
+        z-index: 3;
         width: 20%;
         @include flex();
         gap: 15px;

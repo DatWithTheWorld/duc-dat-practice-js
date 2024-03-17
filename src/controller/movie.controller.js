@@ -4,6 +4,7 @@ class MovieController {
        this.movieViews = movieViews;
        this.movieViews.toggleLogin();
        this.movieViews.toggleRegist();
+       this.movieViews.toggleTool();
     }
 }
 export default MovieController;

@@ -1,4 +1,5 @@
-import { IcMaximizeIcon, IcPauseIcon, IcSlidersIcon, IcVolumeIcon } from "../../resources/assets/icons";
+
+import { IcMaximizeIcon, IcPauseIcon, IcPlayCircleIcon, IcReturnIcon, IcSlidersIcon, IcVolumeIcon } from "../../resources/assets/icons";
 
 const Playscr = (videolink,timing,maxtime) => {
       return ` 
@@ -6,7 +7,12 @@ const Playscr = (videolink,timing,maxtime) => {
         <source src="http://localhost:3000/food.mp4" type="video/mp4">
       </video>
       <div class="playscr">
-     
+        <figure class="playcircle">
+        <img src="${IcPlayCircleIcon}">
+        </figure>
+        <figure class="returnbtn">
+        <img src="${IcReturnIcon}">
+        </figure>
         <div class="playscr-bar">
             <figure>
                 <img src="${IcPauseIcon}">

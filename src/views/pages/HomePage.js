@@ -10,8 +10,12 @@ const HomePage = () => {
     ${leftNav()}
     </div>
     <div class="main-section-content--right">
-    ${Header()}
+   
     <div class="header-title">
+    ${Header()}
+    <video id="topvideotrending" width="100%" height="100%" autoplay controls>
+    <source src="http://localhost:3000/food.mp4" type="video/mp4">
+  </video>
     <p class="movie-name">Insider</p>
     <div class="movie-details">
     <span class="movie-details-year">2022</span>

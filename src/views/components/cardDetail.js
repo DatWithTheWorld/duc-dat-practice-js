@@ -1,3 +1,4 @@
+
 import { IcHeartActiveIcon, IcStarIcon } from "../../resources/assets/icons";
 
 function CardDetail(movies){

@@ -13,3 +13,4 @@ export { default as IcMessageIcon} from './ic-message.svg';
 export { default as IcSlidersIcon} from './ic-sliders.svg';
 export { default as IcLogOutIcon} from './ic-log-out.svg';
 export { default as PngTkoTrain} from './png-tko-train.png';
+export { default as IcStarIcon} from './ic-star.svg';

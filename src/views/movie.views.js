@@ -156,6 +156,7 @@ class MovieView {
   }
   loginss(users){
     this.users = users;
+    console.log(users)
     const form = document.querySelector(".form-log");
 const button = document.querySelector(".btn-submit-login");
 

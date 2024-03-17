@@ -13,7 +13,7 @@ const Trending = () => {
     <h3 class="hd-favorite">Trending at this moment</h3>
     <div class="movie-trending">
    </div>
- 
+
 </div>
     </section>
     `;

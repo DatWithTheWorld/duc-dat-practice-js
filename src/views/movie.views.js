@@ -22,37 +22,44 @@ class MovieView {
 
     this.router.changeRoute();
   }
-  appearToolbar() {
+   appearToolbar() {
     const returnbtn = document.querySelector('.returnbtn');
     const playscr = document.querySelector('.playscr');
     const playcircle = document.querySelector('.playcircle');
     const playbarcon = document.querySelector('.playscr-bar-con');
-    const figureE = playscr.querySelector('.figuresc');
+    const playbar = document.querySelector('.playscr-bar');
+    const figureE = Array.from(playscr.querySelectorAll('.figuresc'));
+    const videos = document.getElementById('playsrcvd');
+    const opa = document.querySelector('.opa');
+    
     playscr.addEventListener('click', function (event) {
-      const videos = document.getElementById('playsrcvd');
-    const target = event.target;
-      if( target !== playbarcon && !Array.from(figureE).includes(target)){
-        if(videos.paused){
+      const target = event.target;
+      if (target !== playbar && !figureE.includes(target)) {
+        if (videos.paused) {
           videos.play();
           playcircle.classList.toggle('hidden');
+          returnbtn.classList.toggle('hidden');
           setTimeout(() => {
-            playbarcon.classList.toggle('hidden')
-            returnbtn.classList.toggle('hidden')
-          },10000);
-        }else{
+            playbarcon.classList.toggle('hidden');
+          }, 2000);
+          setTimeout(() => {
+            opa.classList.toggle('hidden');
+          }, 0);
+        } else {
           videos.pause();
-          
+          opa.classList.toggle('hidden');
           playcircle.classList.toggle('hidden');
-          playbarcon.classList.toggle('hidden')
+          playbarcon.classList.toggle('hidden');
           returnbtn.classList.toggle('hidden');
         }
       }
     });
-    videos.addEventListener('ended', () =>{
+    
+    videos.addEventListener('ended', () => {
       playcircle.classList.toggle('hidden');
-      playbarcon.classList.toggle('hidden')
+      playbarcon.classList.toggle('hidden');
       returnbtn.classList.toggle('hidden');
-    })
+    });
   }
   toggleBar(){
     const playscrbarcon = document.querySelector('.playscr-bar-con')
@@ -61,7 +68,7 @@ class MovieView {
       setTimeout(() => {
         playscrbarcon.classList.toggle('hidden')
         returnbtn.classList.toggle('hidden')
-      },10000);
+      },2000);
   }
 
   initRoute() {
@@ -124,7 +131,7 @@ class MovieView {
     })
     thirdli.addEventListener("click",(e)=>{
       e.preventDefault();
-      window.location.href = "http://localhost:1235/trending";
+      window.location.href = "http://localhost:1235/playscr";
     })
   }
   showSite(){
@@ -148,8 +155,7 @@ class MovieView {
       thirdli.style.opacity = "1"
     }
   }
+  
 }
-
-
 
 export default MovieView;

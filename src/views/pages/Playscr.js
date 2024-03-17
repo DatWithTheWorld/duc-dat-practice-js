@@ -7,13 +7,13 @@ const Playscr = (videolink,timing,maxtime) => {
         <source src="http://localhost:3000/food.mp4" type="video/mp4">
       </video>
       <div class="playscr">
-        <figure class="playcircle hidden">
+        <figure class="figuresc playcircle hidden">
         <img src="${IcPlayCircleIcon}">
         </figure>
-        <figure class="returnbtn hidden">
+        <figure class="figuresc returnbtn ">
         <img src="${IcReturnIcon}">
         </figure>
-        <div class="playscr-bar-con hidden">
+        <div class="playscr-bar-con ">
         <div class="playscr-bar">
         <figure>
              <img src="${IcPauseIcon}">

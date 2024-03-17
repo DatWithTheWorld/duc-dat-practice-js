@@ -9,11 +9,14 @@ const Trending = () => {
     ${leftNav()}
     </div>
     <div class="main-section-content--right">
+    <div class = "opacitydiv"></div>
     ${Header()}
     <h3 class="hd-favorite">Trending at this moment</h3>
     <div class="movie-trending">
    </div>
-
+    <div class = "card-container">
+    
+    </div>
 </div>
     </section>
     `;

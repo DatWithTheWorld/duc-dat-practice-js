@@ -6,6 +6,7 @@ import Playscr from './pages/Playscr';
 import Favorite from './pages/Favorite';
 import HomePage from './pages/HomePage';
 import cardTrending from './components/cardTrending';
+import CardDetail from './components/cardDetail';
 class MovieView {
   constructor() {
     this.app = document.querySelector('#root');
@@ -226,6 +227,32 @@ class MovieView {
     });
     movieTrending.innerHTML = html;
   }
+  
+  showCardTrending(movies){
+    this.movies = movies;
+    const movieTrending = document.querySelector(".movie-trending");
+    const cardContainer = document.querySelector(".card-container");
+    const cardTrending = movieTrending.querySelectorAll(".card-trending");
+   cardTrending.forEach((card)=>{
+    card.addEventListener("click",(e)=>{
+      e.preventDefault();
+      card.style.opacity = "1";
+      cardTrending.forEach((othercard)=>{
+        if(othercard !== card) {
+           othercard.style.opacity = "0.3";
+        }
+      });
+      const id = card.getAttribute("data-id");
+      this.movies.forEach((movie)=>{
+        if(movie.mid === id){
+          cardContainer.innerHTML = CardDetail(movie);
+        }
+      });
+
+   })
+  
+  })
+}
 }
 
 export default MovieView;

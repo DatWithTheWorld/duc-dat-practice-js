@@ -1,7 +1,10 @@
+
+import { IcHeartActiveIcon, IcStarIcon } from "../../resources/assets/icons";
+
 function CardDetail(movies){
    return `
    <div class="card-details" data-id="${movies.mid}">
-   <figure><img src="${movies.poster}"></figure>
+   <figure><img src="http://localhost:3000/${movies.poster}.png"></figure>
  <div class="card-details-content">
      <div class="card-details-content-firstline">
              <h2 class="title">${movies.name}</h2>

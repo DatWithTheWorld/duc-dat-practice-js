@@ -149,7 +149,7 @@ const HomePage = (movies = []) => {
     <div class="movie-center-trending">
     <h3>Trending</h3>
     <div class="movie-center-trending-card">
-      
+
     </div>
     </div>
     <div class="movie-center-continue">

@@ -148,7 +148,8 @@ class MovieView {
       thirdli.style.opacity = "1"
     }
   }
-  
 }
+
+
 
 export default MovieView;

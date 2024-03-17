@@ -97,13 +97,15 @@
         z-index: 3;
         height: 100vh;
         background-color: $background-left-nav;
-       
+       position: fixed;
+       left: 0;
+       top: 0;
     }
 }
 .header-title{
-    margin-top: 5%;
     @include flex($direction:column);
     gap: 20px;
+    padding: 50px 0;
     .movie-name{
         @include font($font-size:pxToRem(48),$font-weight:600);
     }

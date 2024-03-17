@@ -75,8 +75,8 @@ class MovieView {
       }
     });
   }
-
-  
 }
+
+
 
 export default MovieView;

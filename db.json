@@ -8,16 +8,10 @@
       "email": "",
       "favorites": [
         {
-          "id": "3"
-        },
-        {
-          "id": "dpvt"
-        },
-        {
           "id": "2"
         },
         {
-          "id": "1"
+          "id": "tyea"
         }
       ],
       "watched": [
@@ -198,6 +192,18 @@
       "link": "video.mp4",
       "duration": 15.812789,
       "description": "a",
+      "evaluate": "1.0",
+      "favorites": "ic-heart-3d"
+    },
+    {
+      "id": "tyea",
+      "name": "ABL",
+      "year": "2024",
+      "type": "Cartoon",
+      "poster": "moonfall.png",
+      "link": "food.mp4",
+      "duration": 100.366933,
+      "description": "Âgasfsdffsfsfsafasfsfsdfdfasdfas",
       "evaluate": "1.0",
       "favorites": "ic-heart-3d"
     }

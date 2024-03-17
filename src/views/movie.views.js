@@ -304,7 +304,7 @@ button.addEventListener("click", (e) => {
         const id = carddt.getAttribute("data-id");
         this.movies.forEach((movie)=>{
           if(movie.id === id){
-           this.idmv.foreach((idm)=>{
+           this.idmv.forEach((idm)=>{
             if(idm.id === id){
               console.log(movie.link)
               sessionStorage.setItem("link", movie.link)
@@ -488,6 +488,7 @@ bindAddToFavorite(handle){
  const button = document.querySelectorAll(".btn-addFavorite");
  button.forEach((btn) => {
   btn.addEventListener("click", () =>{
+    console.log(btn);
     const parentDiv = btn.closest(".card-trending")
     console.log(parentDiv);
     if (parentDiv){
@@ -501,8 +502,10 @@ bindAddToFavorite(handle){
     }
     const id = parentDiv.getAttribute("data-id");
      handle(id); 
-        window.location.reload();
-    
+       setTimeout(() => {
+         window.location.reload();
+     
+       }, 1000);
     }
   })
  })

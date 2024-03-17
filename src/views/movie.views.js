@@ -18,7 +18,6 @@ class MovieView {
         this.main.appendChild(this.container);
         this.app.appendChild(this.toastList);
         this.app.appendChild(this.main);
-
         // this.container.innerHTML += PreLogin();
         this.container.innerHTML += Playscr();
         }   

@@ -1,4 +1,3 @@
-
 import Header from '../layouts/header';
 import {
   IcHeartActiveIcon,
@@ -130,8 +129,6 @@ const HomePage = (movies = []) => {
  </div>
     <div class="header-title">
     ${Header()}
-    <div class="header-title">
-    ${Header()}
     <video id="topvideotrending" width="100%" height="100%" autoplay controls>
     <source src="http://localhost:3000/food.mp4" type="video/mp4">
   </video>
@@ -151,6 +148,7 @@ const HomePage = (movies = []) => {
     <div class="movie-center-trending">
     <h3>Trending</h3>
     <div class="movie-center-trending-card">
+      
     </div>
     </div>
     <div class="movie-center-continue">

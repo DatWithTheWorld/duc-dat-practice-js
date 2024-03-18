@@ -480,7 +480,7 @@ displayDataContinue(movies,ids, idmv){
       if(id === card.getAttribute("data-id")){
         const btnfvr = card.querySelector('.card-trending-status');
         const imga = btnfvr.querySelector("img");
-        imga.src = "http://localhost:3000/ic-heart-3d-hv.svg";
+        imga.src = "https://movie-m5ac.onrender.com/ic-heart-3d-hv.svg";
       }
     })
    })

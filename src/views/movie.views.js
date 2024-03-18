@@ -432,7 +432,7 @@ showFavoriteItem(ids) {
       if (id == value) {
         const btnfvr = card.querySelector('.card-trending-status');
         const imga = btnfvr.querySelector("img");
-        imga.src = "http://localhost:3000/ic-heart-3d-hv.svg";
+        imga.src = "https://movie-m5ac.onrender.com//ic-heart-3d-hv.svg";
       }
     });
   });
@@ -495,10 +495,10 @@ bindAddToFavorite(handle){
     if (parentDiv){
       console.log(parentDiv.getAttribute("data-id"));
       const imga = parentDiv.querySelector(".image-status")
-      if(imga.src === "http://localhost:3000/ic-heart-3d.svg"){
-        imga.src = "http://localhost:3000/ic-heart-3d-hv.svg";
-      }else if (imga.src === "http://localhost:3000/ic-heart-3d-hv.svg"){
-        imga.src = "http://localhost:3000/ic-heart-3d.svg";
+      if(imga.src === "https://movie-m5ac.onrender.com/ic-heart-3d.svg"){
+        imga.src = "https://movie-m5ac.onrender.com/ic-heart-3d-hv.svg";
+      }else if (imga.src === "https://movie-m5ac.onrender.com/ic-heart-3d-hv.svg"){
+        imga.src = "https://movie-m5ac.onrender.com/ic-heart-3d.svg";
   
     }
     const id = parentDiv.getAttribute("data-id");

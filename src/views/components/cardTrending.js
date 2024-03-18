@@ -9,7 +9,7 @@ function cardTrending(movie){
     </figure>
     <button class="btn-addFavorite">
     <figure class="card-trending-status">
-    <img class = "image-status" src="http://localhost:3000/${movie.favorites}.svg"> 
+    <img class = "image-status" src="https://movie-m5ac.onrender.com/${movie.favorites}.svg"> 
     </figure>
     </button>
     <div class="card-trending-content">

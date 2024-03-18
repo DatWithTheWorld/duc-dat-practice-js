@@ -4,7 +4,7 @@ import { IcMaximizeIcon, IcPauseIcon, IcPlayCircleIcon, IcReturnIcon, IcSlidersI
 const Playscr = (videolink) => {
       return ` 
       <video id="playsrcvd" width="100%" height="100%" autoplay controls>
-        <source src="http://localhost:3000/${videolink}" type="video/mp4">
+        <source src="https://movie-m5ac.onrender.com/${videolink}" type="video/mp4">
       </video>
       <div class="playscr">
         <div class = "opa hidden"></div>

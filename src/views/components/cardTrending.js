@@ -5,7 +5,7 @@ function cardTrending(movie){
     return `
     <div class="card-trending" data-id="${movie.id}">
     <figure class="card-trending-figure">
-    <img src="http://localhost:3000/${movie.poster}"> 
+    <img src="https://movie-m5ac.onrender.com/${movie.poster}"> 
     </figure>
     <button class="btn-addFavorite">
     <figure class="card-trending-status">

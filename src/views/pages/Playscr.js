@@ -1,10 +1,17 @@
-
-import { IcMaximizeIcon, IcPauseIcon, IcPlayCircleIcon, IcReturnIcon, IcSlidersIcon, IcVolumeIcon } from "../../resources/assets/icons";
+import {
+  IcMaximizeIcon,
+  IcPauseIcon,
+  IcPlayCircleIcon,
+  IcReturnIcon,
+  IcSlidersIcon,
+  IcVolumeIcon,
+} from '../../resources/assets/icons';
+import { apimv } from '../../resources/constants/constant';
 
 const Playscr = (videolink) => {
-      return ` 
+  return ` 
       <video id="playsrcvd" width="100%" height="100%" autoplay controls>
-        <source src="http://localhost:3000/${videolink}" type="video/mp4">
+        <source src="${apimv}${videolink}" type="video/mp4">
       </video>
       <div class="playscr">
         <div class = "opa hidden"></div>
@@ -34,7 +41,6 @@ const Playscr = (videolink) => {
         </div>
       </div>
       `;
-}
+};
 
 export default Playscr;
-

@@ -1,15 +1,19 @@
+import {
+  IcHeartActiveIcon,
+  IcHeartNoActiveIcon,
+  IcStarIcon,
+} from '../../resources/assets/icons';
+import { apimv } from '../../resources/constants/constant';
 
-import { IcHeartActiveIcon, IcHeartNoActiveIcon, IcStarIcon } from "../../resources/assets/icons";
-
-function CardDetail(movies){
-   console.log(movies.duration)
-   const hours = Math.floor(movies.duration / 60);
-   const minutes = movies.duration % 60;
-   const mformat = minutes.toFixed(0).padStart(2, '0');
-   const timeFormat = `${hours}h ${mformat}m`
-   return `
+function CardDetail(movies) {
+  console.log(movies.duration);
+  const hours = Math.floor(movies.duration / 60);
+  const minutes = movies.duration % 60;
+  const mformat = minutes.toFixed(0).padStart(2, '0');
+  const timeFormat = `${hours}h ${mformat}m`;
+  return `
    <div class="card-details" data-id="${movies.id}">
-   <figure><img src="http://localhost:3000/${movies.poster}"></figure>
+   <figure><img src="${apimv}${movies.poster}"></figure>
  <div class="card-details-content">
      <div class="card-details-content-firstline">
              <h2 class="title">${movies.name}</h2>

@@ -13,9 +13,9 @@ class MovieService {
 
   async getAllMovies() {
     try {
-      let {data} = await api.get('/movies');
+      let { data } = await api.get('/movies');
       if (data) {
-         data = await data.map((movie) => new Movie(movie));
+        data = await data.map((movie) => new Movie(movie));
         this.movies = data;
         return this.movies;
       }
@@ -23,44 +23,44 @@ class MovieService {
       createToast('error', error);
     }
   }
-  async getAllUsers(){
-    try{
-      let {data} = await api.get('/users');
-      if(data){
-      data = await data.map((user) => new User(user));
-      this.users = data;
-      return this.users;
+  async getAllUsers() {
+    try {
+      let { data } = await api.get('/users');
+      if (data) {
+        data = await data.map((user) => new User(user));
+        this.users = data;
+        return this.users;
       }
-    }catch (error) {
+    } catch (error) {
       createToast('error', error);
     }
   }
- 
-  bindDataChanged(callback){
+
+  bindDataChanged(callback) {
     this.onDataChanged = callback;
   }
   commitMovies = (movies) => {
     this.onDataChanged(movies);
-  }
-  async addUser(user){
+  };
+  async addUser(user) {
     try {
-      const {data} = await api.post('/users', new User(user));
-      if(data){
+      const { data } = await api.post('/users', new User(user));
+      if (data) {
         this.users.push(data);
       }
-      createToast('info', "Added user");
+      createToast('info', 'Added user');
     } catch (error) {
       createToast('error', "Can't add user");
     }
   }
 
-  async addMovie(movie){
+  async addMovie(movie) {
     try {
-      const {data} = await api.post('/movies', new Movie(movie));
-      if(data){
+      const { data } = await api.post('/movies', new Movie(movie));
+      if (data) {
         this.movies.push(data);
       }
-      createToast('info', "Added movie");
+      createToast('info', 'Added movie');
     } catch (error) {
       createToast('error', "Can't add movie");
     }
@@ -70,117 +70,90 @@ class MovieService {
       const { data } = await api.get(`/users/${id}`);
       if (data) {
         const userFavorites = data.favorites;
-        const arr = userFavorites.map((favorite)=> favorite.id).join()
-        const arrf = arr.split(',')
-        console.log(arrf)
+        const arr = userFavorites.map((favorite) => favorite.id).join();
+        const arrf = arr.split(',');
         this.midbyuid = arrf;
-        return this.midbyuid ;
+        return this.midbyuid;
       }
-    } catch (error) {
-      console.error(error);
-    }
+    } catch (error) {}
   }
-  async getMovieIdByUIDCTN(){
-    const id = sessionStorage.getItem("id");
+  async getMovieIdByUIDCTN() {
+    const id = sessionStorage.getItem('id');
     try {
       const { data } = await api.get(`/users/${id}`);
       if (data) {
         const usercontinue = data.watched;
-        const arr = usercontinue.map(watched => ({ id: watched.id, timewatched: watched.timewatched }));
+        const arr = usercontinue.map((watched) => ({
+          id: watched.id,
+          timewatched: watched.timewatched,
+        }));
         this.continue = arr;
-        console.log(arr)
         return this.continue;
       }
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   }
-  async addToFavorite(id){
+  async addToFavorite(id) {
     const uid = sessionStorage.getItem('id');
-    console.log(uid)
-    console.log(id)
     try {
-      console.log(uid)
-      const { data } = await api.get(`/users/${uid}`)
-      console.log(data)
-       if (data) {
-       console.log(data.favorites)
+      const { data } = await api.get(`/users/${uid}`);
+      if (data) {
         this.midbyuid = data.favorites;
-        let check = false
-        this.midbyuid.forEach((mid)=>{
-          if(mid.id === id){
+        let check = false;
+        this.midbyuid.forEach((mid) => {
+          if (mid.id === id) {
             check = true;
           }
-        })
-        if(check){
-          this.midbyuid = this.midbyuid.filter(item => item.id !== id)
-          console.log(this.midbyuid)
+        });
+        if (check) {
+          this.midbyuid = this.midbyuid.filter((item) => item.id !== id);
           try {
-            await api.patch(`/users/${uid}`, { favorites : this.midbyuid })
-            createToast("infor","success ")
+            await api.patch(`/users/${uid}`, { favorites: this.midbyuid });
+            createToast('infor', 'success ');
           } catch (errorss) {
-            createToast("error","Failed")
+            createToast('error', 'Failed');
           }
-        }else{
-        this.midbyuid.push({id: id});
-        data.favorites =this.midbyuid;
-        console.log(data.favorites)
-        try {
-          await api.put(`/users/${uid}`,data);
-          createToast("infor","success ")
-        } catch (errors) {
-          console.error(errors);
+        } else {
+          this.midbyuid.push({ id: id });
+          data.favorites = this.midbyuid;
+          try {
+            await api.put(`/users/${uid}`, data);
+            createToast('infor', 'success ');
+          } catch (errors) {}
         }
       }
-      }
-      
-    }catch (error) {
-      console.error(error);
-    }
+    } catch (error) {}
   }
-  async addToContinue(id,time){
+  async addToContinue(id, time) {
     const uid = sessionStorage.getItem('id');
-    console.log(uid)
     try {
-      const { data } = await api.get(`/users/${uid}`)
-      console.log(data)
-      if (data){
-        console.log(data.watched);
+      const { data } = await api.get(`/users/${uid}`);
+      if (data) {
         this.continue = data.watched;
-        let check = false
-        this.continue.forEach((mid)=>{
-          console.log(mid)
-          if(mid.id === id){
-            console.log(mid.id)
+        let check = false;
+        this.continue.forEach((mid) => {
+          if (mid.id === id) {
             check = true;
           }
-        })
-        if(check){
-          this.continue = this.continue.filter(item => item.id!== id)
-          console.log(this.continue)
+        });
+        if (check) {
+          this.continue = this.continue.filter((item) => item.id !== id);
           try {
-            await api.patch(`/users/${uid}`, { watched : this.continue })
-            createToast("infor","success ")
+            await api.patch(`/users/${uid}`, { watched: this.continue });
+            createToast('infor', 'success ');
           } catch (errorss) {
-            createToast("error","Failed")
+            createToast('error', 'Failed');
           }
-        }else{
-          this.continue.push({ "id" : id, "timewatched" : time})
+        } else {
+          this.continue.push({ id: id, timewatched: time });
           data.watched = this.continue;
-          console.log(data.watched)
           try {
             await api.patch(`/users/${uid}`, data);
-            createToast("infor","success add to continue")
-          } catch (error) {
-            
-          }
+            createToast('infor', 'success add to continue');
+          } catch (error) {}
         }
       }
-    } catch (error) {
-      
-    }
+    } catch (error) {}
   }
-  
 }
 
 export default MovieService;

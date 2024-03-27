@@ -30,7 +30,7 @@ class MovieController {
         this.movieViews.appearToolbar();
         this.movieViews.toggleBar();
         this.movieViews.videoDuration();
-        this.movieViews.return(this.handleReturn)
+        this.movieViews.return(this.handleReturn);
       }
       if (
         currentPath === '/home' ||
@@ -82,21 +82,18 @@ class MovieController {
     await this.movieServices.getAllMovies();
     await this.movieServices.getAllUsers();
     this.movieViews.bindAddToFavorite(this.handleAddToFavorite);
-   
   }
-  handleReturn = (id,time) =>{
-   this.movieServices.addToContinue(id,time);
-  }
+  handleReturn = (id, time) => {
+    this.movieServices.addToContinue(id, time);
+  };
   handleAddToFavorite = (id) => {
-    console.log(id);
     this.movieServices.addToFavorite(id);
   };
   async handleDisplayDataTDP() {
     const movies = await this.movieServices.getAllMovies();
     this.movieViews.displayDataTDP(movies);
     const ids = await this.movieServices.getMovieIdByUIDCTN();
-    console.log(ids);
-    this.movieViews.showCardTrending(movies,ids);
+    this.movieViews.showCardTrending(movies, ids);
   }
   async handleDisplayDataFavorites() {
     const movies = await this.movieServices.getAllMovies();
@@ -105,11 +102,13 @@ class MovieController {
     );
     this.movieViews.displayDataFavorites(movies, ids);
   }
-  async handleDisplayContinue(){
-    const movies = await this.movieServices.getAllMovies()
+  async handleDisplayContinue() {
+    const movies = await this.movieServices.getAllMovies();
     const ids = await this.movieServices.getMovieIdByUIDCTN();
-    const idmv = await this.movieServices.getMovieIdByUID(sessionStorage.getItem("id"))
-    this.movieViews.displayDataContinue(movies,ids,idmv);
+    const idmv = await this.movieServices.getMovieIdByUID(
+      sessionStorage.getItem('id'),
+    );
+    this.movieViews.displayDataContinue(movies, ids, idmv);
   }
   handleAddUser = (user) => {
     this.movieServices.addUser(user);

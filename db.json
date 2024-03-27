@@ -8,34 +8,22 @@
       "email": "",
       "favorites": [
         {
+          "id": "1"
+        },
+        {
           "id": "3"
         },
         {
           "id": "dpvt"
         },
         {
-          "id": "2"
-        },
-        {
-          "id": "1"
+          "id": "1mno"
         }
       ],
       "watched": [
         {
           "id": "2",
           "timewatched": "1.016061"
-        },
-        {
-          "id": "3",
-          "timewatched": "1.097431"
-        },
-        {
-          "id": "1",
-          "timewatched": "1.997539"
-        },
-        {
-          "id": "1mno",
-          "timewatched": "1.238972"
         }
       ]
     },
@@ -115,6 +103,33 @@
           "timewatched": "2.044375"
         }
       ]
+    },
+    {
+      "id": "muvv",
+      "name": "",
+      "password": "",
+      "email": "",
+      "avatar": "",
+      "favorites": [],
+      "watched": []
+    },
+    {
+      "id": "3km7",
+      "name": "dat",
+      "password": "@123Datduc",
+      "email": "dat@gmail.com",
+      "avatar": "",
+      "favorites": [],
+      "watched": []
+    },
+    {
+      "id": "v8wo",
+      "name": "nguyenducdat",
+      "password": "Dat@1234567",
+      "email": "dat@gmail.com",
+      "avatar": "",
+      "favorites": [],
+      "watched": []
     }
   ],
   "movies": [
